@@ -217,10 +217,12 @@ function win() {
 function showHelpBox(){
 	if (helpBoxDisplayed == 0) {
 		document.getElementById("helpBox").style.opacity = "1.0";
+		document.getElementById("helpText").style.display = "inline";
 		helpBoxDisplayed = 1;
 		paused = true;
 	}else{
 		document.getElementById("helpBox").style.opacity = "0.0";
+		document.getElementById("helpText").style.display = "none";
 		helpBoxDisplayed = 0;
 		paused = false;
 	}
@@ -253,7 +255,7 @@ The game is BROKEN!!!
 <p id="recentscorelost">swag</p>
 <font size="3">Press 'Space' for help</font>
 </div>
-<div id="helpBox"><div id="helpSection"><font color="black" size="5">
+<div id="helpBox"><div id="helpSection"><font id="helpText" style="display:none;" color="black" size="5">
 <b><p>You are now paused!</p></b>
 <p>Try to hit the box with the number before time runs out</p>
 <p>Don't hit the walls!</p>
