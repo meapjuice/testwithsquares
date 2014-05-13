@@ -11,10 +11,8 @@
   <link rel="stylesheet" type="text/css" href="/css/result-light.css">
   
   <style type='text/css'>
-body
-{
-background-image:url('images/background.png');
-}
+body{background-image:url('images/background.png');}
+
 #pane {
 	position: relative;
 	background-color:#000000;
@@ -92,6 +90,7 @@ notLost = false;
 
 document.onkeypress = function(e){
 	if (e.keyCode == 114) {
+		if (helpBoxDisplayed == 1) showHelpBox();
 		count = 0;
 		document.getElementById("loss").style.opacity = "0.0";
 		enemyValues();
@@ -99,7 +98,6 @@ document.onkeypress = function(e){
 		document.getElementById("box").style.top = "180px";
 		document.getElementById("enemytime").innerHTML = "3";
 		document.getElementById("helpBox").style.opacity = "0.0";
-		helpBoxDisplayed = 0;
 		enemyMaxTime = 250;
 		lastScore = 0;
 		ft = 0;
